@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Billing System - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Billing System</h1>
+    <div>
+        <a href="{% url 'Home-page' %}">Home</a>
+        <a href="{% url 'product-list' %}">Products</a>
+        <a href="{% url 'customer-list' %}">Customers</a>
+        <a href="{% url 'sale-list' %}">Sales</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Welcome to the Billing System</h2>
+    <p>Manage your products, customers, and sales efficiently.</p>
+
+    <a href="{% url 'add-product' %}" class="btn">Add Product</a>
+    <a href="{% url 'add-customer' %}" class="btn">Add Customer</a>
+    <a href="{% url 'add-sale' %}" class="btn">Create Sale</a>
+</div>
+
+<footer>
+    &copy; 2025 Billing System. All rights reserved.
+</footer>
+
+</body>
+</html>

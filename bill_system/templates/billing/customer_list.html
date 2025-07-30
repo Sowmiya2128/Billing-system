@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer List</title>
+</head>
+<body><center>
+    <h2>All Customer</h2>
+    <a href="{% url 'add-customer' %}">Add Customer</a>
+   <ul> {% for customer in customers %}
+<li>{{customer.name}}-{{customer.email}}
+    - {{ customer.phone }}
+</li>
+{% endfor %}</ul></center>
+</body>
+</html>

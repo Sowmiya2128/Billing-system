@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales List</title>
+</head>
+<style>
+    .body{
+        background-color: darkseagreen;
+    }
+</style>
+<body><center>
+    <h2>All Sales</h2>
+    <a href="{% url 'add-sale' %}">Add New Sale</a>
+   <ul> {% for sale in sales %}
+<li>{{sale.date|date:"y-m-d H:i"}}-
+    {{sale.customer.name}} bought {{sale.quantity}}* {{sale.product.name}} = {{sale.total_price}}
+</li>
+{% endfor %}</ul></center>
+</body>
+</html>
